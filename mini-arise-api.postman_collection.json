@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "140708fc-91e3-467b-ac2c-95536955d276",
+		"name": "mini-arise-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Loan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "aFNEZlRlN1VoOVpiN29pWUIxcmVPOVpnd3E5MHRkNFM=",
+						"type": "text"
+					},
+					{
+						"key": "usertype",
+						"value": "Customer",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customer_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "loan_amount",
+							"value": "120",
+							"type": "text"
+						},
+						{
+							"key": "loan_term",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/createloan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"createloan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve loan",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "QXZkOXhnUGhQZE1jNmxpYWhZNndmdkh4TlA2UnE2aUc=",
+						"type": "text"
+					},
+					{
+						"key": "usertype",
+						"value": "Admin",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/approveloan/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"approveloan",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer loan",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "aFNEZlRlN1VoOVpiN29pWUIxcmVPOVpnd3E5MHRkNFM=",
+						"type": "text"
+					},
+					{
+						"key": "usertype",
+						"value": "Customer",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/getcustomerloans/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getcustomerloans",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add repayments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "aFNEZlRlN1VoOVpiN29pWUIxcmVPOVpnd3E5MHRkNFM=",
+						"type": "text"
+					},
+					{
+						"key": "usertype",
+						"value": "Customer",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "repayment_id",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "40.00",
+							"type": "text"
+						},
+						{
+							"key": "loan_term",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/addreypayments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addreypayments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

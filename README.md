@@ -25,6 +25,12 @@ Documentation for the framework can be found on the [Lumen website](https://lume
         9. Now run the server through command; php -S localhost:8000 -t public in local
         10. We will use collection file to test the created API's
 
+        
 
-    
+3. Testing: I have attached the postman collection, please find in the application directory.
+   Note: I have created a dummy record for Admin and Customer for authorizing with token_api key,
+   it will automatically inserted while running the seeder command while installation.
+
+   Please use the same api token as it is hard coded in seeder class for dummy datas.
+
 
