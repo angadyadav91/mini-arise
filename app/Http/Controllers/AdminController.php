@@ -18,7 +18,7 @@ class AdminController extends Controller
     public function updateStatus(Request $request, $id)
     {
         $status = DB::table('statuses')
-        ->select('statuses.id')->where('title', 'Paid')->first();
+        ->select('statuses.id')->where('title', 'Approved')->first();
         if (Loan::where('id', $id)->exists()) {
             $loan = Loan::find($id);
             $loan->status_id = $status->id;

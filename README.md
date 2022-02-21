@@ -13,5 +13,18 @@ Documentation for the framework can be found on the [Lumen website](https://lume
 
 2. Steps to install the application
 
+        1. Clode the codebase from https://github.com/angadyadav91/mini-arise.git or dowload.
+        2. After getting/extracting the codebase; go to the root directory of application.
+        3. run command: composer install
+        4. It will download all the required package to run application succesfully.
+        5. Please replace .env.example file to .env file
+        6. I have used datebase named 'mini-aspire', please create a new database in local
+          and use the same datebase and credentail in the .env file. 
+        7. Now create DB migration; run command PHP artisan migrate to migrate all db table and it's structure.
+        8. Run command php artisan db:seed, this is all done from setup end.
+        9. Now run the server through command; php -S localhost:8000 -t public in local
+        10. We will use collection file to test the created API's
+
+
     
 

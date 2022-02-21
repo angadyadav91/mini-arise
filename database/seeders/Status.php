@@ -22,6 +22,10 @@ class Status extends Seeder
             array(
             'title' => "Paid",
             'created_at' => Carbon::now(),
+            ),
+            array(
+            'title' => "Approved",
+            'created_at' => Carbon::now(),
             )
             ));
     }
